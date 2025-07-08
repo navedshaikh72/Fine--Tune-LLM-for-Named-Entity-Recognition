@@ -26,7 +26,7 @@ Fine-tuned Transformer model for identifying financial entities like ORG, MONEY,
 
 1. Clone the repo
 
-git clone https://github.com/yourusername/financial-ner.git
+git clone https://github.com/navedshaikh72/Fine-tune-LLM-Named-entity-recognition.git
 cd financial-ner
 
 2. Set up virtual environment (recommended)
@@ -62,7 +62,7 @@ Option 2: Hugging Face Pipeline (after training)
 from transformers import pipeline, AutoTokenizer, AutoModelForTokenClassification
 
 model = AutoModelForTokenClassification.from_pretrained("./financial_ner_model")
-tokenizer = AutoTokenizer.from_pretrained("./financial_ner_model")
+tokenizer = AutoTokenizer.from_pretrained("./financial_model")
 
 ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
 ner_pipeline("Goldman Sachs expects inflation to cool by Q4 2023.")
